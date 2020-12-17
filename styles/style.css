@@ -1,0 +1,73 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+section{
+  margin-top: 10px;
+}
+.section-s1{
+  background-color: #ffdddd;
+}
+.section-s2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #ddddff;
+}
+.section-circle{
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+  border-radius: 25px;
+}
+.section-s3{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: 50px;
+  background-color: #ffffdd;
+}
+.section-s4{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 50px 50px;
+  background-color: #ffddff;
+}
+.section-s4>.section-circle{
+  place-self: center;
+}
+.section-s5{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 40px 40px;
+  background-color: #ddffff;
+}
+.section-s5>.section-circle{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+.section-circle__color{
+  background-color: green;
+}
+@media screen and (min-width: 1000px){
+  .section-circle__color {
+    background-color: yellow;
+  }
+  .section-s5{
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: 40px;
+  }
+}
+@media screen and (max-width: 500px){
+  .section-circle__color {
+    background-color: red;
+  }
+  .section-s5{
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 40px 40px 40px 40px;
+  }
+}
